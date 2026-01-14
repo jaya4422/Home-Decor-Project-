@@ -9,25 +9,27 @@
   <link rel="stylesheet" href="./css/auth.css">
 </head>
 
-<body>
-  <main class="auth-container" aria-labelledby="loginTitle">
-    <h1 id="loginTitle">Sign in</h1>
+<body class="auth-page">
+  <div class="auth-wrapper">
+    <div class="auth-card is-visible" aria-labelledby="loginTitle">
+      <h2 id="loginTitle">Sign in</h2>
 
-    <form class="auth-form" id="loginForm" action="#" method="post" novalidate>
-      <label for="email">Email</label>
-      <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com">
+      <form class="auth-form" id="loginForm" action="#" method="post" novalidate>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com">
 
-      <label for="password">Password</label>
-      <div class="password-row">
-        <input id="password" name="password" type="password" required autocomplete="current-password" placeholder="Your password">
-        <button type="button" id="togglePwd" aria-label="Toggle password visibility">👁️</button>
-      </div>
+        <label for="password">Password</label>
+        <div class="password-row">
+          <input id="password" name="password" type="password" required autocomplete="current-password" placeholder="Your password">
+          <button type="button" id="togglePwd" aria-label="Toggle password visibility">👁️</button>
+        </div>
 
-      <button type="submit" class="btn primary">Sign in</button>
+        <button type="submit" class="btn primary">Sign in</button>
 
-      <p class="auth-footer">Don't have an account? <a href="signup.html">Sign up</a></p>
-    </form>
-  </main>
+        <p class="auth-footer">Don't have an account? <a href="signup.html">Sign up</a></p>
+      </form>
+    </div>
+  </div>
 
   <script>
     document.getElementById('togglePwd').addEventListener('click', function() {

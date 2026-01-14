@@ -9,28 +9,30 @@
   <link rel="stylesheet" href="./css/auth.css">
 </head>
 
-<body>
-  <main class="auth-container" aria-labelledby="signupTitle">
-    <h1 id="signupTitle">Create account</h1>
+<body class="auth-page">
+  <div class="auth-wrapper">
+    <div class="auth-card is-visible" aria-labelledby="signupTitle">
+      <h2 id="signupTitle">Create account</h2>
 
-    <form class="auth-form" id="signupForm" action="#" method="post" novalidate>
-      <label for="name">Full name</label>
-      <input id="name" name="name" type="text" required autocomplete="name" placeholder="Jane Doe">
+      <form class="auth-form" id="signupForm" action="#" method="post" novalidate>
+        <label for="name">Full name</label>
+        <input id="name" name="name" type="text" required autocomplete="name" placeholder="Jane Doe">
 
-      <label for="email">Email</label>
-      <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com">
 
-      <label for="password">Password</label>
-      <input id="password" name="password" type="password" required autocomplete="new-password" placeholder="Create a password">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" required autocomplete="new-password" placeholder="Create a password">
 
-      <label for="confirm">Confirm password</label>
-      <input id="confirm" name="confirm" type="password" required placeholder="Repeat your password">
+        <label for="confirm">Confirm password</label>
+        <input id="confirm" name="confirm" type="password" required placeholder="Repeat your password">
 
-      <button type="submit" class="btn primary">Create account</button>
+        <button type="submit" class="btn primary">Create account</button>
 
-      <p class="auth-footer">Already have an account? <a href="login.html">Sign in</a></p>
-    </form>
-  </main>
+        <p class="auth-footer">Already have an account? <a href="login.html">Sign in</a></p>
+      </form>
+    </div>
+  </div>
 
   <script>
     document.getElementById('signupForm').addEventListener('submit', function(e) {
