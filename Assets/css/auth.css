@@ -190,37 +190,11 @@ body.auth-page {
 }
 
 /* Password input + toggle */
-.password-row {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-}
+.password-row { display:flex; gap:8px; align-items:center; }
+.password-row input { flex:1; }
 
-.password-row input {
-    flex: 1;
-}
+#togglePwd { background:transparent; border:1px solid rgba(16,24,40,0.06); padding:8px 10px; border-radius:8px; cursor:pointer; }
+#togglePwd:hover { box-shadow:0 6px 18px rgba(0,0,0,0.06); }
 
-#togglePwd {
-    background: transparent;
-    border: 1px solid rgba(16, 24, 40, 0.06);
-    padding: 8px 10px;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-#togglePwd:hover {
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-}
-
-.auth-card .auth-footer {
-    margin-top: 14px;
-    text-align: center;
-    color: var(--muted);
-    font-size: 14px;
-}
-
-.auth-card .auth-footer a {
-    color: var(--brand-brown);
-    font-weight: 600;
-    text-decoration: none;
-}
+.auth-card .auth-footer { margin-top:14px; text-align:center; color:var(--muted); font-size:14px; }
+.auth-card .auth-footer a { color:var(--brand-brown); font-weight:600; text-decoration:none; }

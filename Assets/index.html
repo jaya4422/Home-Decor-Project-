@@ -21,12 +21,15 @@
     <div class="header-inner">
       <a href="menu.html" class="menu open-menu" aria-label="Open menu">Menu</a>
       <div class="logo">R.V</div>
-      <div class="actions">Cart (0) <a href="login.html" class="login-link" aria-label="Log in"><svg class="user-svg"
+      <div class="actions">
+        <button id="cart-toggle" class="cart-btn" aria-label="Open cart">Cart (<span id="cart-count">0</span>)</button>
+        <a href="login.html" class="login-link" aria-label="Log in"><svg class="user-svg"
             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
             <circle cx="12" cy="8" r="3" stroke="currentColor" stroke-width="1.2" fill="none" />
             <path d="M4 20c0-4 4-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="1.4" fill="none"
               stroke-linecap="round" stroke-linejoin="round" />
-          </svg><span class="text">Log In</span></a></div>
+          </svg><span class="text">Log In</span></a>
+      </div>
     </div>
   </header>
 
@@ -65,23 +68,33 @@
           <div class="product-meta">
             <div class="product-title">Eco Glass</div>
             <div class="product-price">$5.50</div>
+            <button class="add-to-cart" data-name="Eco Glass" data-price="5.50">Add to cart</button>
           </div>
         </article>
         <article class="product-card">
           <div class="tile"><img src="./images/pic.webp" alt="Seaweed Natural Soap"></div>
-          <div class="product-title">Seaweed Natural Soap</div>
-          <div class="product-price">$6.50</div>
+          <div class="product-meta">
+            <div class="product-title">Seaweed Natural Soap</div>
+            <div class="product-price">$6.50</div>
+            <button class="add-to-cart" data-name="Seaweed Natural Soap" data-price="6.50">Add to cart</button>
+          </div>
         </article>
         <article class="product-card">
           <div class="tile"><img src="./images/pic 2.webp" alt="Stainless Steel Bottle">
           </div>
-          <div class="product-title">Stainless Steel Bottle</div>
-          <div class="product-price">$25.00</div>
+          <div class="product-meta">
+            <div class="product-title">Stainless Steel Bottle</div>
+            <div class="product-price">$25.00</div>
+            <button class="add-to-cart" data-name="Stainless Steel Bottle" data-price="25.00">Add to cart</button>
+          </div>
         </article>
         <article class="product-card">
           <div class="tile"><img src="./images/04.webp" alt="Compostable Kitchen Sponges"></div>
-          <div class="product-title">Compostable Kitchen Sponges</div>
-          <div class="product-price">$7.00</div>
+          <div class="product-meta">
+            <div class="product-title">Compostable Kitchen Sponges</div>
+            <div class="product-price">$7.00</div>
+            <button class="add-to-cart" data-name="Compostable Kitchen Sponges" data-price="7.00">Add to cart</button>
+          </div>
         </article>
       </div>
     </div>
@@ -243,6 +256,7 @@
     })();
   </script>
 
+  <script src="./javascript/cart.js" defer></script>
 </body>
 
 </html>

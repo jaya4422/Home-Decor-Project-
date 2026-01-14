@@ -34,15 +34,7 @@
     </div>
   </div>
 
-  <script>
-    document.getElementById('signupForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const pwd = document.getElementById('password').value;
-      const confirm = document.getElementById('confirm').value;
-      if (pwd !== confirm) { alert('Passwords do not match'); return; }
-      alert('This is a static demo — add backend signup logic to register users.');
-    });
-  </script>
+  <script src="./javascript/auth.js" defer></script>
 </body>
 
 </html>
