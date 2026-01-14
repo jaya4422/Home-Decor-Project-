@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Cormorant+Garamond:wght@300;400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-pzjwE6PqJf4sC2xQ6X1m3Qe0Xv5nq7YQKf2lZ1xQxZk6x8dQ8+H1xK2b1Q2FY8h3p5nY1lYl2kQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/style.css">
+  <title>HAVEN</title>
+</head>
+
+<body>
+  <div class="promo">Free shipping on all international orders over $35 — <a href="#">Shop Now</a></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="menu.html" class="menu open-menu" aria-label="Open menu">Menu</a>
+      <div class="logo">R.V</div>
+      <div class="actions">Cart (0) <a href="login.html" class="login-link" aria-label="Log in"><svg class="user-svg"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="8" r="3" stroke="currentColor" stroke-width="1.2" fill="none" />
+            <path d="M4 20c0-4 4-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="1.4" fill="none"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg><span class="text">Log In</span></a></div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-bg-wrapper" aria-hidden="true">
+      <img src="./images/main pic .webp" class="hero-bg" alt="Hero background">
+    </div>
+    <div class="hero-center">
+      <h1 class="hero-title">HAVEN</h1>
+      <p class="hero-sub">Home Essentials for Sustainable Living</p>
+      <a href="#" class="btn">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- NEW IN PRODUCTS -->
+  <section class="new-in">
+    <div class="container">
+      <h2>New In</h2>
+      <button class="nav-arrow left" aria-label="Previous">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M15 6L9 12l6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </button>
+      <button class="nav-arrow right" aria-label="Next">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </button>
+      <div class="product-grid">
+        <article class="product-card">
+          <span class="product-badge">Best Seller</span>
+          <div class="tile"><img src="./images/02.webp" alt="Eco Glass"></div>
+          <div class="product-meta">
+            <div class="product-title">Eco Glass</div>
+            <div class="product-price">$5.50</div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="tile"><img src="./images/pic.webp" alt="Seaweed Natural Soap"></div>
+          <div class="product-title">Seaweed Natural Soap</div>
+          <div class="product-price">$6.50</div>
+        </article>
+        <article class="product-card">
+          <div class="tile"><img src="./images/pic 2.webp" alt="Stainless Steel Bottle">
+          </div>
+          <div class="product-title">Stainless Steel Bottle</div>
+          <div class="product-price">$25.00</div>
+        </article>
+        <article class="product-card">
+          <div class="tile"><img src="./images/04.webp" alt="Compostable Kitchen Sponges"></div>
+          <div class="product-title">Compostable Kitchen Sponges</div>
+          <div class="product-price">$7.00</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURE -->
+  <section class="feature">
+    <div class="container">
+      <div class="feature-content">
+        <h2>Zero Waste<br>Bath Products</h2>
+        <p>Where quality meets eco-friendly</p>
+        <a href="#" class="btn dark">Shop Now</a>
+      </div>
+      <div class="feature-image" aria-hidden="true">
+        <img src="./images/hero-pic1.webp" alt="Bath Products">
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLECTIONS -->
+  <section class="collections">
+    <div class="container">
+      <h2>Shop Collections</h2>
+      <div class="collection-grid">
+        <a class="collection-card" href="#">
+          <img src="./images/pic 5.webp" alt="Kitchen">
+          <div class="overlay">
+            <h3>Kitchen</h3>
+            <p>Shop Collection</p>
+          </div>
+        </a>
+        <a class="collection-card" href="#">
+          <img src="./images/03.webp" alt="Bath">
+          <div class="overlay">
+            <h3>Bath</h3>
+            <p>Shop Collection</p>
+          </div>
+        </a>
+        <a class="collection-card" href="#">
+          <img src="./images/09.webp" alt="On the Go">
+          <div class="overlay">
+            <h3>On the Go</h3>
+            <p>Shop Collection</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      const hero = document.querySelector('.hero-center');
+      if (!hero) return;
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReducedMotion) {
+        hero.classList.add('is-visible');
+        return;
+      }
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            hero.classList.add('is-visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+      observer.observe(hero);
+    })();
+  </script>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="follow">
+        <h4>Follow our journey</h4>
+        <div class="handle">@re.vert.home</div>
+        <div class="follow-grid">
+          <div class="item"><img src="./images/05.webp" alt="post"></div>
+          <div class="item"><img src="./images/07.webp" alt="post"></div>
+          <div class="item"><img src="./images/08.webp" alt="post"></div>
+          <div class="item"><img src="./images/09.webp" alt="post"></div>
+        </div>
+      </div>
+
+      <div class="footer-main">
+        <div class="footer-left">
+          <h3>Stay inspired and eco-conscious</h3>
+          <p>Sign up for new arrivals, styling tips, and special offers. We keep things intentional — no spam, just good
+            design.</p>
+
+          <div class="newsletter">
+            <form id="newsletter-form" action="#" onsubmit="return false;" aria-label="Subscribe to newsletter">
+              <input type="email" id="newsletter-email" name="email" placeholder="Enter your email"
+                aria-label="Email address" required>
+              <div class="submit-row">
+                <label><input type="checkbox" id="newsletter-consent"> I agree to receive emails</label>
+                <buttonid="newsletter-submit">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <ul>
+            <li><strong>Company</strong></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+
+          <ul>
+            <li><strong>Shop</strong></li>
+            <li><a href="#">New In</a></li>
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Gift Cards</a></li>
+          </ul>
+
+          <ul>
+            <li><strong>Support</strong></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Returns</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Haven Home — All rights reserved</div>
+        <div class="footer-social">
+          <a href="#">Instagram</a>
+          <a href="#">Pinterest</a>
+          <a href="#">Facebook</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Minimal newsletter validation and feedback
+    (function () {
+      const form = document.getElementById('newsletter-form');
+      const email = document.getElementById('newsletter-email');
+      const btn = document.getElementById('newsletter-submit');
+
+      btn.addEventListener('click', () => {
+        if (!email.value || !email.value.includes('@')) {
+          email.focus();
+          alert('Please enter a valid email address.');
+          return;
+        }
+        if (!document.getElementById('newsletter-consent').checked) {
+          alert('Please agree to receive emails.');
+          return;
+        }
+        // Simple success feedback — replace with real submit later
+        alert('Thanks! You are subscribed.');
+        email.value = '';
+        document.getElementById('newsletter-consent').checked = false;
+      });
+    })();
+  </script>
+
+</body>
+
+</html>

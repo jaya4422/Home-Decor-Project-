@@ -1,0 +1,190 @@
+/* Auth page styles (login / signup) */
+:root {
+    --card-bg: #fffaf7;
+    --page-bg: #f3efe8;
+    --brand-brown: #7a4b35;
+    --brand-green: #cfe7bf;
+    --accent: #3a2b24;
+    --muted: #6b7280;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body.auth-page {
+    background: var(--page-bg);
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.auth-wrapper {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 460px;
+    background: linear-gradient(180deg, rgba(255, 250, 247, 1), rgba(252, 249, 243, 1));
+    padding: 30px 34px;
+    border-radius: 14px;
+    box-shadow: 0 24px 60px rgba(16, 24, 32, 0.08);
+    border: 1px solid rgba(122, 75, 53, 0.06);
+    transform: translateY(8px);
+    opacity: 0;
+    transition: transform 420ms cubic-bezier(.2, .8, .2, 1), opacity 420ms ease;
+    position: relative;
+    overflow: visible;
+}
+
+/* decorative header stripe and badge */
+.auth-card::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 6px;
+    background: var(--brand-brown);
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(122, 75, 53, 0.15);
+}
+
+.auth-card::after {
+    content: "";
+    position: absolute;
+    top: -22px;
+    right: 18px;
+    width: 20px;
+    height: 20px;
+    background: var(--brand-green);
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* when page loads, add .is-visible to show card */
+.auth-card.is-visible {
+    transform: none;
+    opacity: 1;
+}
+
+.auth-card h2 {
+    margin: 0 0 12px;
+    font-size: 26px;
+    color: var(--brand-brown);
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* Inline login link (used on signup page) */
+.inline-login {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--brand-brown);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.inline-login i {
+    color: var(--brand-brown);
+    font-size: 18px;
+}
+
+.inline-login .text {
+    display: inline-block;
+}
+
+@media (max-width:480px) {
+    .inline-login .text {
+        display: none;
+    }
+
+    .inline-login i,
+    .inline-login svg.user-svg {
+        font-size: 16px;
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* inline login svg styles */
+.inline-login svg.user-svg {
+    width: 18px;
+    height: 18px;
+    color: var(--brand-brown);
+}
+
+.auth-card label {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.auth-card input {
+    width: 100%;
+    padding: 12px 14px;
+    margin-top: 8px;
+    border-radius: 8px;
+    border: 1px solid rgba(16, 24, 40, 0.06);
+    background: #fff;
+    transition: box-shadow .18s ease, border-color .18s ease;
+}
+
+.auth-card input:focus {
+    outline: none;
+    border-color: rgba(136, 209, 138, 0.95);
+    box-shadow: 0 4px 18px rgba(136, 209, 138, 0.12);
+}
+
+.auth-card .muted {
+    margin-top: 12px;
+    text-align: center;
+    color: var(--brand-brown);
+    font-size: 13px;
+}
+
+.auth-card .btn {
+    width: 100%;
+    display: inline-block;
+    background: linear-gradient(90deg, var(--brand-green), #e6f5d9);
+    color: var(--brand-brown);
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-weight: 600;
+    border: none;
+    box-shadow: 0 10px 30px rgba(123, 175, 110, 0.12);
+}
+
+.auth-card .btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 40px rgba(123, 175, 110, 0.18);
+}
+
+/* small screens */
+@media (max-width:520px) {
+    .auth-card {
+        padding: 18px;
+        border-radius: 10px;
+    }
+}
+
+/* reduce motion */
+@media (prefers-reduced-motion: reduce) {
+
+    .auth-card,
+    .auth-card.is-visible {
+        transition: none;
+        transform: none;
+        opacity: 1;
+    }
+}

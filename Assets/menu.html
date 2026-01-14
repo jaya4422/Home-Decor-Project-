@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Menu — Re.Vert</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Cormorant+Garamond:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/menu.css">
+</head>
+
+<body>
+    <div class="menu-wrap">
+        <a class="menu-close" href="index.html" aria-label="Close menu">✕</a>
+
+        <header class="menu-head">
+            <div class="logo">R.V</div>
+        </header>
+
+        <main class="menu-main container">
+            <nav class="menu-nav" aria-label="Primary">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop All</a></li>
+                    <li><a href="#">Our Mission</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <aside class="menu-collections" aria-label="Collections">
+                <p class="label">Shop Collections:</p>
+                <ul>
+                    <li><a href="#">Kitchen</a></li>
+                    <li><a href="#">Bath</a></li>
+                    <li><a href="#">On the Go</a></li>
+                    <li><a href="#">Sale</a></li>
+                </ul>
+            </aside>
+        </main>
+
+        <script>
+            // Close on Escape
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') window.location = 'index.html';
+            });
+        </script>
+    </div>
+</body>
+
+</html>
