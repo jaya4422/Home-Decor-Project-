@@ -431,6 +431,15 @@ header:not(.site-header) nav ul li a:hover {
   text-decoration: none;
 }
 
+/* non-interactive cart label: looks like the cart link but is intentionally unclickable */
+.cart-label {
+  font-weight: 700;
+  color: var(--brand-brown);
+  text-decoration: none;
+  cursor: default;
+  pointer-events: none;
+}
+
 #cart-drawer h3 {
   margin: 4px 0 8px;
   font-size: 18px;

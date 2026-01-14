@@ -22,7 +22,7 @@
       <a href="Assets/menu.html" class="menu open-menu" aria-label="Open menu">Menu</a>
       <div class="logo">R.V</div>
       <div class="actions">
-        <a href="Assets/cart.html" class="cart-link" aria-label="View cart">Cart</a>
+        <span class="cart-label" aria-label="Cart" role="status">Cart (<span id="cart-count" aria-live="polite">0</span>)</span>
         <a href="Assets/login.html" class="login-link" aria-label="Log in"><svg class="user-svg"
             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
             <circle cx="12" cy="8" r="3" stroke="currentColor" stroke-width="1.2" fill="none" />
@@ -68,7 +68,7 @@
           <div class="product-meta">
             <div class="product-title">Eco Glass</div>
             <div class="product-price">$5.50</div>
-            <a href="Assets/cart.html" class="add-to-cart" aria-label="View cart">Add to cart</a> 
+            <button type="button" class="add-to-cart" data-name="Eco Glass" data-price="5.50">Add to cart</button>
           </div>
         </article>
         <article class="product-card">
@@ -76,7 +76,8 @@
           <div class="product-meta">
             <div class="product-title">Seaweed Natural Soap</div>
             <div class="product-price">$6.50</div>
-            <a href="Assets/cart.html" class="add-to-cart" aria-label="View cart">Add to cart</a>
+            <button type="button" class="add-to-cart" data-name="Seaweed Natural Soap" data-price="6.50">Add to
+              cart</button>
           </div>
         </article>
         <article class="product-card">
@@ -85,7 +86,8 @@
           <div class="product-meta">
             <div class="product-title">Stainless Steel Bottle</div>
             <div class="product-price">$25.00</div>
-            <a href="Assets/cart.html" class="add-to-cart" aria-label="View cart">Add to cart</a>
+            <button type="button" class="add-to-cart" data-name="Stainless Steel Bottle" data-price="25.00">Add to
+              cart</button>
           </div>
         </article>
         <article class="product-card">
@@ -93,7 +95,8 @@
           <div class="product-meta">
             <div class="product-title">Compostable Kitchen Sponges</div>
             <div class="product-price">$7.00</div>
-            <a href="Assets/cart.html" class="add-to-cart" aria-label="View cart">Add to cart</a>
+            <button type="button" class="add-to-cart" data-name="Compostable Kitchen Sponges" data-price="7.00">Add to
+              cart</button>
           </div>
         </article>
       </div>
@@ -255,7 +258,7 @@
       });
     })();
   </script>
-
+  <script src="Assets/javascript/cart-count.js" defer></script>
 </body>
 
 </html>
