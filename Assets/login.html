@@ -1,49 +1,48 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Login — Re.Vert</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pzjwE6PqJf4sC2xQ6X1m3Qe0Xv5nq7YQKf2lZ1xQxZk6x8dQ8+H1xK2b1Q2FY8h3p5nY1lYl2kQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/auth.css">
-  <title>Log in — HAVEN</title>
 </head>
 
-<body class="auth-page">
-  <div class="auth-wrapper">
-    <form class="auth-card" id="loginForm" novalidate>
-      <h2>Log in</h2>
-      <label>
-        Email
-        <input type="email" name="email" required>
-      </label>
-      <label>
-        Password
-        <input type="password" name="password" required minlength="6">
-      </label>
-      <button type="submit" class="btn">Log in</button>
-      <p class="muted">Don't have an account? <a href="signup.html">Sign up</a></p>
+<body>
+  <main class="auth-container" aria-labelledby="loginTitle">
+    <h1 id="loginTitle">Sign in</h1>
+
+    <form class="auth-form" id="loginForm" action="#" method="post" novalidate>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com">
+
+      <label for="password">Password</label>
+      <div class="password-row">
+        <input id="password" name="password" type="password" required autocomplete="current-password" placeholder="Your password">
+        <button type="button" id="togglePwd" aria-label="Toggle password visibility">👁️</button>
+      </div>
+
+      <button type="submit" class="btn primary">Sign in</button>
+
+      <p class="auth-footer">Don't have an account? <a href="signup.html">Sign up</a></p>
     </form>
-  </div>
+  </main>
+
   <script>
-    document.getElementById('loginForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-      const f = e.target;
-      if (!f.email.value || !f.password.value) {
-        alert('Please enter email and password');
-        return;
-      }
-      alert('Logged in (demo)');
+    document.getElementById('togglePwd').addEventListener('click', function() {
+      const pwd = document.getElementById('password');
+      pwd.type = (pwd.type === 'password') ? 'text' : 'password';
     });
 
-    // reveal card with a small animation
-    (function () {
-      const card = document.querySelector('.auth-card');
-      if (!card) return;
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { card.classList.add('is-visible'); return; }
-      setTimeout(() => card.classList.add('is-visible'), 80);
-    })();
+    // Demo submit handler
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      if (!email) { alert('Please provide an email.'); return; }
+      alert('This site is static — implement server-side auth to complete login.');
+    });
   </script>
 </body>
+
 </html>

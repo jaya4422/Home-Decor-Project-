@@ -1,53 +1,46 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sign up — Re.Vert</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pzjwE6PqJf4sC2xQ6X1m3Qe0Xv5nq7YQKf2lZ1xQxZk6x8dQ8+H1xK2b1Q2FY8h3p5nY1lYl2kQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/auth.css">
-  <title>Sign up — HAVEN</title>
 </head>
 
-<body class="auth-page">
-  <div class="auth-wrapper">
-    <form class="auth-card" id="signupForm" novalidate>
-      <h2>Create account</h2>
-      <label>
-        Full name
-        <input type="text" name="name" required>
-      </label>
-      <label>
-        Email
-        <input type="email" name="email" required>
-      </label>
-      <label>
-        Password
-        <input type="password" name="password" required minlength="6">
-      </label>
-      <button type="submit" class="btn">Create account</button>
-      <p class="muted">Already have an account? <a href="login.html" class="inline-login"><svg class="user-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="3" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="text">Log in</span></a></p>
-    </form>
-  </div>
-  <script>
-    document.getElementById('signupForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-      const f = e.target;
-      if (!f.email.value || !f.password.value || !f.name.value) {
-        alert('Please complete the form');
-        return;
-      }
-      alert('Account created (demo)');
-    });
+<body>
+  <main class="auth-container" aria-labelledby="signupTitle">
+    <h1 id="signupTitle">Create account</h1>
 
-    // reveal card with a small animation
-    (function () {
-      const card = document.querySelector('.auth-card');
-      if (!card) return;
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { card.classList.add('is-visible'); return; }
-      setTimeout(() => card.classList.add('is-visible'), 80);
-    })();
+    <form class="auth-form" id="signupForm" action="#" method="post" novalidate>
+      <label for="name">Full name</label>
+      <input id="name" name="name" type="text" required autocomplete="name" placeholder="Jane Doe">
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com">
+
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" required autocomplete="new-password" placeholder="Create a password">
+
+      <label for="confirm">Confirm password</label>
+      <input id="confirm" name="confirm" type="password" required placeholder="Repeat your password">
+
+      <button type="submit" class="btn primary">Create account</button>
+
+      <p class="auth-footer">Already have an account? <a href="login.html">Sign in</a></p>
+    </form>
+  </main>
+
+  <script>
+    document.getElementById('signupForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const pwd = document.getElementById('password').value;
+      const confirm = document.getElementById('confirm').value;
+      if (pwd !== confirm) { alert('Passwords do not match'); return; }
+      alert('This is a static demo — add backend signup logic to register users.');
+    });
   </script>
 </body>
+
 </html>
