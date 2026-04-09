@@ -147,27 +147,6 @@
     </div>
   </section>
 
-  <script>
-    (function () {
-      const hero = document.querySelector('.hero-center');
-      if (!hero) return;
-      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (prefersReducedMotion) {
-        hero.classList.add('is-visible');
-        return;
-      }
-      const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            hero.classList.add('is-visible');
-            obs.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.2 });
-      observer.observe(hero);
-    })();
-  </script>
-
   <footer class="site-footer">
     <div class="container">
       <div class="follow">
@@ -188,12 +167,12 @@
             design.</p>
 
           <div class="newsletter">
-            <form id="newsletter-form" action="#" onsubmit="return false;" aria-label="Subscribe to newsletter">
+            <form id="newsletter-form" action="#" aria-label="Subscribe to newsletter">
               <input type="email" id="newsletter-email" name="email" placeholder="Enter your email"
                 aria-label="Email address" required>
               <div class="submit-row">
                 <label><input type="checkbox" id="newsletter-consent"> I agree to receive emails</label>
-                <buttonid="newsletter-submit">Subscribe</button>
+                <button id="newsletter-submit" type="submit">Subscribe</button>
               </div>
             </form>
           </div>
@@ -234,31 +213,7 @@
     </div>
   </footer>
 
-  <script>
-    // Minimal newsletter validation and feedback
-    (function () {
-      const form = document.getElementById('newsletter-form');
-      const email = document.getElementById('newsletter-email');
-      const btn = document.getElementById('newsletter-submit');
-
-      btn.addEventListener('click', () => {
-        if (!email.value || !email.value.includes('@')) {
-          email.focus();
-          alert('Please enter a valid email address.');
-          return;
-        }
-        if (!document.getElementById('newsletter-consent').checked) {
-          alert('Please agree to receive emails.');
-          return;
-        }
-        // Simple success feedback — replace with real submit later
-        alert('Thanks! You are subscribed.');
-        email.value = '';
-        document.getElementById('newsletter-consent').checked = false;
-      });
-    })();
-  </script>
-  <script src="Assets/javascript/cart-count.js" defer></script>
+  <script src="Assets/javascript/app.js" defer></script>
 </body>
 
 </html>

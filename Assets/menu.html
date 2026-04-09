@@ -39,28 +39,7 @@
       </aside>
     </main>
 
-    <script>
-      // Close on Escape
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') window.location = '../index.html';
-      });
-
-      // Focus trap (simple)
-      (function() {
-        const focusable = 'a, button';
-        const modal = document.querySelector('.menu-wrap');
-        if (!modal) return;
-        const first = modal.querySelectorAll(focusable)[0];
-        const last = modal.querySelectorAll(focusable)[modal.querySelectorAll(focusable).length - 1];
-        modal.addEventListener('keydown', (e) => {
-          if (e.key !== 'Tab') return;
-          if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
-          else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
-        });
-        // autofocus first link
-        if (first) first.focus();
-      })();
-    </script>
+    <script src="./javascript/app.js" defer></script>
   </div>
 </body>
 
